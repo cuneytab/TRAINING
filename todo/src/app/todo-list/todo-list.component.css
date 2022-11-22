@@ -1,0 +1,194 @@
+.component-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #F4EA8B;
+}
+
+#header-left-1 {
+    height: 100%;
+    width: 10%;
+    display: flex;
+}
+
+#header-left-2 {
+    height: 100%;
+    width: 20%;
+    display: flex;
+}
+
+#header-center {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-right-1 {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#delete-user-button {
+    width: 147px;
+    height: 45px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 0px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100%;
+}
+
+#delete-user-button:hover {
+    background-color:blanchedalmond;
+}
+
+#header-right-2 {
+    height: 100%;
+    width: 10%;
+    display: flex;
+}
+
+.content-container-big {
+    height: 75%;
+    padding-top: 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.content-container-small {
+    height: 65%;
+    padding-top: 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.list-container {
+    width: 80%;
+    min-height: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+#list-button {
+    width: 100%;
+    height: 90%;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 0px;
+    font-size: 180%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#list-button:hover {
+    background-color: #F4EA8B;
+}
+
+#list-name {
+    width: 75%;
+}
+
+#delete-button-container {
+    width: 25%;
+    height: 63%;
+    display: flex;
+    justify-content: right;
+    align-items: center
+}
+
+#delete-button {
+    margin-right: 30%;
+    border-radius: 50%;
+    border: 0px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: #9FEEB0;
+    width: 37px;
+    height: 77%;
+    color: white;
+    font-size: 100%;
+}
+
+#delete-button:hover {
+    background-color: #58da74;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9FEEB0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #58da74;
+}
+
+.footer-container-small {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container-big {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+app-todo-list-plus {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+app-todo-list-add {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}

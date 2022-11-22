@@ -1,0 +1,40 @@
+.add-elements-container {
+    width: 81%;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+}
+
+#new-list-item-name {
+    width: 78%;
+    height: 60%;
+    margin-bottom: 1%;
+    border: 0px;
+    font-size: 200%;
+    text-align: center;
+}
+
+.add-button{
+    width: 99%;
+    height: 40px;
+    background: #F4EA8B;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 0px;
+    font-size: 150%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-button:hover {
+    background-color: #9FEEB0;
+}

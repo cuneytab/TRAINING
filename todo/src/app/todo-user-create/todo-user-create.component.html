@@ -1,0 +1,14 @@
+<div class="component-container">
+    <div class="header-container">
+        <app-dashboard-page></app-dashboard-page>
+    </div>
+    <div class="content-container">
+        <input id="new-user-name-input" placeholder="New User Name" #user>
+        <button id="create-button" type="submit" (click)="create(user.value)">
+            <b>Create</b> 
+        </button>
+    </div>
+    <div class="footer-container">
+        
+    </div>
+</div>

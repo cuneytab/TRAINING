@@ -1,0 +1,17 @@
+<div class="component-container">
+    <div class="header-container">
+        <h1>{{title}}</h1>
+    </div>
+    <div class="content-container">
+        <input id="user-name-input" placeholder="User Name" #user>
+        <button id="login-button" type="submit" (click)="login(user.value); user.value=''">
+            <b>Login</b> 
+        </button>
+        
+    </div>
+    <div class="footer-container">
+        <button id="new-account-button" routerLink="/new">
+            <b>New Account</b>
+        </button>
+    </div>
+</div>

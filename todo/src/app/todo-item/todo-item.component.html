@@ -1,0 +1,50 @@
+<div class="component-container">
+    <div class="header-container">
+        <app-dashboard-page></app-dashboard-page>
+    </div>
+    <div class="content-container">
+        <div class="list-name-container">
+            <div class="list-name-button-image">
+                <h2>{{todoLists[0]?.name}}</h2>
+            </div>
+        </div>
+        <div class="item-container">
+            <div class="items">
+                <div class="item" *ngFor="let todoItem of todoItems">
+                    <div id="checkbox-container">
+                        <input id="item-checkbox-input" type="checkbox" [checked]="todoItem.check"
+                            (change)="updateTodoItem(todoItem)" />
+                    </div>
+                    <div id="text-container">
+                        <a routerLink="{{todoItem.id}}">
+                            {{todoItem.text}}
+                        </a>
+                    </div>
+                    <div id="delete-button-container">
+                        <button id="item-delete-button" type="button" (click)="deleteTodoItem(todoItem)">-</button>
+                    </div>
+                </div>
+            </div>
+            <!-- <button class="update-items" (click)="updateTodoItems(todoItems)">Save</button> -->
+            <div class="new-item-container">
+                <div class="new-item-box">
+                    <input id="new-todo-text" placeholder="Add new item" #text />
+                    <input id="new-todo-dueDate" type="date" required #dueDate />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer-empty-container-left"></div>
+        <div class="footer-container-middle">
+            <button id="delete-list-button" (click)="deleteTodoList()">
+                Delete list
+            </button>
+        </div>
+        <div class="footer-container-right">
+            <button id="add-item-button" (click)="addTodoItem(text.value, dueDate.value)">
+                +
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="component-container">
+    <div class="header-container">
+        <div id="header-left-1"></div>
+        <div id="header-left-2"></div>
+        <div id="header-center">
+            <h1>{{title}}</h1>
+        </div>
+        <div id="header-right-1">
+            <button id="delete-user-button" (click)="deleteTodoUser()">Delete Account</button>
+        </div>
+        <div id="header-right-2"></div>
+        
+    </div>
+    <div *ngIf="isPlus" class="content-container-big">
+        <div class="list-container" *ngFor="let todoList of todoLists">
+            <button id="list-button" routerLink="{{todoList.id}}/items">
+                <div id="list-name">
+                    {{todoList.name}}
+                </div>
+                <div id="delete-button-container">
+                    <button id="delete-button" (click)="deleteTodoList(todoList)">-</button>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div *ngIf="!isPlus" class="content-container-small">
+        <div class="list-container" *ngFor="let todoList of todoLists">
+            <button id="list-button" routerLink="{{todoList.id}}/items">
+                <div id="list-name">
+                    {{todoList.name}}
+                </div>
+                <div id="delete-button-container">
+                    <button id="delete-button" (click)="deleteTodoList(todoList)">-</button>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div *ngIf="isPlus" class="footer-container-small">  
+        <app-todo-list-plus *ngIf="isPlus" (isPlusEventOutput)="plusBtnClick()"></app-todo-list-plus>
+        <app-todo-list-add *ngIf="!isPlus" (isPlusEventOutput)="addBtnClick()"></app-todo-list-add>
+    </div>
+    <div *ngIf="!isPlus" class="footer-container-big">  
+        <app-todo-list-plus *ngIf="isPlus" (isPlusEventOutput)="plusBtnClick()"></app-todo-list-plus>
+        <app-todo-list-add *ngIf="!isPlus" (isPlusEventOutput)="addBtnClick()"></app-todo-list-add>
+    </div>
+</div>

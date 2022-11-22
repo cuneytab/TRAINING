@@ -1,0 +1,32 @@
+<div class="component-container">
+    <div class="header-container">
+        <app-dashboard-page></app-dashboard-page>
+    </div>
+    <div class="content-container" *ngIf="todoItem">
+        <div class="check-text-container">
+            <div class="checkbox-container">
+                <input id="item-checkbox-input" type="checkbox" [checked]="todoItem.check"
+                    (change)="updateTodoItem(todoItem)" />
+            </div>
+            <div class="textbox-container">
+                 <input id="todoItem-text" [(ngModel)]="todoItem.text" placeholder="Text" />
+            </div>
+            <div class="empty-container-right">
+
+            </div>
+        </div>
+        <input id="todoItem-date" #dueDate type="date" [value]="todoItem.dueDate | date : 'yyyy-MM-dd'"
+            (change)="change(dueDate.value)" />
+            <div id="owner-container">     
+                {{todoItem.owner}}
+            </div>
+        <select id="select-list" [(ngModel)]="todoItem.list" name="list" >
+            <option *ngFor="let todoList of todoLists" value="{{todoList.name}}">{{todoList.name}}</option>
+        </select>
+        <input id="todoItem-notes" [(ngModel)]="todoItem.notes" placeholder="Notes" />
+        <button id="save-item-button" (click)="save()">Save</button>
+    </div>
+    <div class="footer-container" *ngIf="todoItem">
+        <button id="delete-item-button" (click)="deleteTodoItem()">Delete</button>
+    </div>
+</div>

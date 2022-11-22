@@ -1,0 +1,6 @@
+<div class="add-elements-container">
+    <input id="new-list-item-name" placeholder="Name" #name />
+    <button class="add-button" (click)="addTodoList(name.value); name.value=''" (click)="addBtnClick();">
+        <b>Add</b>
+    </button>
+</div>
