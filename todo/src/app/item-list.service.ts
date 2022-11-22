@@ -34,7 +34,7 @@ export class ItemListService {
   }
 
   //async
-  addTodoUser(todoUser: TodoUser): Observable<TodoUser> { // ok außer routing
+  addTodoUser(todoUser: TodoUser): Observable<TodoUser> { //ok außer routing
     const url = `${this.todoUrl}/add`;
     //const response = firstValueFrom( 
     return this.http.post<TodoUser>(url, todoUser, this.httpOptions);
