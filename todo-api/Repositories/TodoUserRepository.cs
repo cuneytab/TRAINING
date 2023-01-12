@@ -21,7 +21,7 @@ namespace todo_api.Repositories
         public TodoUserRepository(IConfiguration iconfig)
         {
             _iconfig = iconfig;
-            string connectionString = iconfig["CosmosDbConnectionString"];
+            string connectionString = _iconfig["CosmosDbConnectionString"];
             databaseId = "todo";
             containerId = "users";
 
